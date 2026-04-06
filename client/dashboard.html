@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Dashboard | CredNova</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            CredNova
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html" class="active">Issue Certificate</a>
+            <a href="verify.html">Verify</a>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h2>Institution Dashboard</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Issue a mathematically verifiable digital credential.</p>
+        
+        <div class="wallet-status" id="walletStatusIndicator">
+            <div>
+                <span style="font-weight: 600;">Not Connected</span>
+                <div style="font-size: 0.8rem; color: var(--text-muted);" id="walletAddress">Connect MetaMask to issue</div>
+            </div>
+            <button class="btn btn-secondary" id="connectWalletBtn">Connect Wallet</button>
+        </div>
+
+        <form id="issueForm">
+            <div class="form-group">
+                <label for="certificateId">Certificate ID (Unique Hash/String)</label>
+                <input type="text" id="certificateId" class="form-control" required placeholder="e.g. CERT-2026-001">
+            </div>
+            <div class="form-group">
+                <label for="studentName">Student Full Name</label>
+                <input type="text" id="studentName" class="form-control" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="courseName">Course / Degree Name</label>
+                <input type="text" id="courseName" class="form-control" required placeholder="B.Tech Computer Science">
+            </div>
+            <div class="form-group">
+                <label for="institutionName">Institution Name</label>
+                <input type="text" id="institutionName" class="form-control" required placeholder="IIT Madras">
+            </div>
+            <div class="form-group">
+                <label for="issueDate">Issue Date</label>
+                <input type="date" id="issueDate" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Issue on Blockchain</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; Sidhant Kaushik</p>
+    </footer>
+
+    <!-- Ethers.js -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.7.0/dist/ethers.umd.min.js"></script>
+    <!-- <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js" type="application/javascript"></script> -->
+    <script src="js/app.js"></script>
+</body>
+</html>

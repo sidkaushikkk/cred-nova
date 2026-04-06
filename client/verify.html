@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Certificate | CredNova</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            CredNova
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Issue Certificate</a>
+            <a href="verify.html" class="active">Verify</a>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h2>Verify a Certificate</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Employers & third parties can instantly verify authenticity.</p>
+        
+        <form id="verifyForm">
+            <div class="form-group">
+                <label for="verifyCertId">Certificate ID</label>
+                <input type="text" id="verifyCertId" class="form-control" required placeholder="Enter Certificate ID here...">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Verify Authenticity</button>
+        </form>
+
+        <div id="resultBox" class="result-box">
+            <!-- Results injected here from JS -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Sidhant Kaushik</p>
+    </footer>
+
+    <!-- Ethers.js -->
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.7.0/dist/ethers.umd.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
