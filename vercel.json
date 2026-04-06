@@ -1,8 +1,7 @@
 {
   "routes": [
-    {
-      "src": "/",
-      "dest": "/client/index.html"
-    }
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/dashboard", "dest": "/dashboard.html" },
+    { "src": "/verify", "dest": "/verify.html" }
   ]
 }
